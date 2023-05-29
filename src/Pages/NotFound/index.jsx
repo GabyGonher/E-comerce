@@ -4,9 +4,7 @@
 function NotFound() {
   return (
     <>
-      <div>
-        <h1 className="text-3xl font-bold underline bg-red-100">NotFound</h1>
-      </div>
+      <div></div>
     </>
   );
 }
