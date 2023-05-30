@@ -1,11 +1,10 @@
-// import NotFound from '../Home';
-// import './App.css';
+import Layout from '../../Components/Layout';
 
 function NotFound() {
   return (
-    <>
-      <div></div>
-    </>
+    <Layout>
+      <h1>Not Found</h1>
+    </Layout>
   );
 }
 
