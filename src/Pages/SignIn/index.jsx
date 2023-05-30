@@ -1,10 +1,10 @@
-// import './App.css';
+import Layout from '../../Components/Layout';
 
 function SignIn() {
   return (
-    <>
-      <div></div>
-    </>
+    <Layout>
+      <h1>SignIn</h1>
+    </Layout>
   );
 }
 
