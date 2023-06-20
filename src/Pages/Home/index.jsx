@@ -4,21 +4,30 @@ import Card from '../../Components/Card';
 
 function Home() {
   const [items, setItems] = useState(null);
-
+console.log(items, 'items')
   useEffect(() => {
-    fetch('https://api.escuelajs.co/api/v1/products')
-      .then((response) => response.json())
-      .then((data) => setItems(data));
-    // console.log(data);
+    // fetch('https://api.escuelajs.co/api/v1/products')
+    fetch('https://dummyjson.com/products')
+    .then(response => response.json())
+    .then((data) => setItems(data.products));
+    // .then((data) => setItems(data.products));
   }, []);
 
+    console.log(items, 'items2')
   return (
     <Layout>
-      <h1>Home</h1>
-      {items?.map(() => {
-        return <Card />;
-      })}
-      {/* <Card /> */}
+      Home
+    
+      <div className='grid gap-4 grid-cols-4 w-full max-w-screen-lg'>
+      {
+    items?.map( item => (
+            <Card 
+            // key={item.id} data={item.id} 
+            key={item.id} data={item}
+            />
+      ))
+    }
+      </div>
     </Layout>
   );
 }
