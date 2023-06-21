@@ -1,4 +1,5 @@
 import { BrowserRouter, useRoutes } from 'react-router-dom';
+import { ContextProvider } from '../../Context';
 import Home from '../Home';
 import MyAccount from '../MyAccount';
 import MyOrder from '../MyOrder';
@@ -21,10 +22,12 @@ const AppRoutes = () => {
 
 function App() {
   return (
+    <ContextProvider>
     <BrowserRouter>
       <AppRoutes />
       <Navbar />
     </BrowserRouter>
+    </ContextProvider>
   );
 }
 
