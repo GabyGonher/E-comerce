@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { NavLink } from 'react-router-dom';
+import { AppContext } from '../../Context'
 
 const Navbar = () => {
+  const context  = useContext(AppContext)
   const activeStyle = 'underline underline-offset-4';
 
   return (
@@ -68,7 +71,7 @@ const Navbar = () => {
             Sign In
           </NavLink>
         </li>
-        <li> Carrito 0</li>
+        <li> Carrito {context.count}</li>
       </ul>
     </nav>
   );
