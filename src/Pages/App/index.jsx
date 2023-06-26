@@ -7,6 +7,7 @@ import MyOrders from '../MyOrders';
 import NotFound from '../NotFound';
 import SignIn from '../SignIn';
 import Navbar from '../../Components/Navbar';
+import CheckoutSideMenu  from '../../Components/CheckoutSideMenu';
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -26,6 +27,7 @@ function App() {
     <BrowserRouter>
       <AppRoutes />
       <Navbar />
+      <CheckoutSideMenu />
     </BrowserRouter>
     </AppContextProvider>
   );
