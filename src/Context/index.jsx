@@ -9,6 +9,12 @@ export const AppContextProvider = ({children}) => {
     const closeProductDetail = () => setproductOpen(false)
     //  Para mostrar detalles del producto
     const [productToShow, setProductToShow] = useState({});
+    // Agregar articulos al carrito
+    const [cartProducts, setCartProducts] = useState([]);
+    //Mostrar detalles de orden
+     const [isCheckoutSideMenuOpen, setCheckoutSideMenu] = useState(false);
+    const openCheckoutSideMenu = () => setCheckoutSideMenu(true)
+    const closeCheckoutSideMenu = () => setCheckoutSideMenu(false)
     
     
 return (
@@ -20,6 +26,11 @@ return (
     closeProductDetail,
     productToShow, 
     setProductToShow,
+    cartProducts, 
+    setCartProducts,
+    isCheckoutSideMenuOpen,
+    openCheckoutSideMenu,
+    closeCheckoutSideMenu,
     
     
   }}>
