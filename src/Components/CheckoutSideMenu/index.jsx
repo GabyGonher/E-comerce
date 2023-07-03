@@ -1,10 +1,12 @@
 import { useContext } from 'react';
 import { XMarkIcon } from '@heroicons/react/24/solid'
 import { AppContext } from '../../Context'
+import OrderCard from '../../Components/OrderCard';
 import './styles.css'
 
 const CheckoutSideMenu = () => {
   const context  = useContext(AppContext)
+  console.log(context.cartProducts, "Productos menu deslizable");
 
 
   return (
@@ -20,6 +22,19 @@ const CheckoutSideMenu = () => {
   </div>
 
 </div>
+<div className='px-6'>
+{
+  context.cartProducts.map(product => (
+    <OrderCard 
+    key={product.id}
+    title={product.title}
+    imageUrl={product.images[0]}
+    price={product.price}
+    />
+  ))
+}
+</div>
+
     </aside>
   )
 }
